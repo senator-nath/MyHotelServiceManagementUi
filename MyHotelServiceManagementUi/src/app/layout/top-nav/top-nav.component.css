@@ -1,0 +1,76 @@
+.toolbar {
+    height: 64px; /* Reduced toolbar height */
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-button {
+    margin-right: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 0 20px #f0f0f0;
+  }
+  
+  .toolbar-spacer {
+    flex: 1 1 auto;
+  }
+  
+  .toolbar-logo {
+    margin: 0 20px;
+    object-fit: contain;
+    height: 40px;
+    width: 100px;
+  }
+  
+  .sign-reg {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+  }
+  
+  .example-button {
+    margin: 0 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 0 20px #f0f0f0;
+  }
+  
+  .main-content {
+    padding-top: 64px;
+  }
+  
+  .drawer-container {
+    height: calc(100vh - 64px);
+  }
+  
+  .sidenav {
+    width: 200px;
+    background-color: #003f63;
+    color: #fff;
+  }
+  
+  .sidenav .mat-list-item {
+    color: #fff;
+  }
+  
+  .sidenav .mat-list-item:hover {
+    background-color: #e1e4e6;
+  }
+  
+  .sidenav .mat-icon {
+    margin-right: 16px;
+  }
+  
+  .drawer-content {
+    padding: 20px;
+  }

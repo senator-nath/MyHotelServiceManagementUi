@@ -45,10 +45,18 @@ import { MatTableModule } from '@angular/material/table';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TopNavComponent } from './layout/top-nav/top-nav.component';
+import { UserRgisterComponent } from './user/user-register/user-rgister.component';
+import { UserLoginComponent } from './user/user-login/user-login.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TopNavComponent,
+    UserRgisterComponent,
+    UserLoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -89,7 +97,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatTooltipModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTableModule
+    MatTableModule,
+    MatSidenavModule,
+    MatListModule
   ],
   schemas:[
     CUSTOM_ELEMENTS_SCHEMA

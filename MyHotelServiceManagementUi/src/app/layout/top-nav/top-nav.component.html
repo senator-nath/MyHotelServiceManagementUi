@@ -1,0 +1,50 @@
+<mat-toolbar class="toolbar">
+    <div class="container">
+      <button mat-icon-button class="menu-button" (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div class="toolbar-spacer"></div>
+      <img routerLink="/home" src="assets/images/Hotel-Logo.jpeg" alt="Logo" class="toolbar-logo">
+      <div class="toolbar-spacer"></div>
+      <div class="sign-reg">
+        <button mat-raised-button class="example-button" aria-label="Register" 
+          [routerLink]="['register']">
+          Register
+        </button>
+        <button mat-raised-button class="example-button" aria-label="Login" 
+          [routerLink]="['login']">
+          Login
+        </button>
+      </div>
+    </div>
+  </mat-toolbar>
+  
+  <div class="main-content">
+    <mat-drawer-container autosize class="drawer-container">
+      <mat-drawer #drawer class="sidenav" mode="over">
+        <mat-nav-list>
+          <mat-list-item>
+            <button mat-button>
+              <mat-icon>dashboard</mat-icon>
+              Dashboard
+            </button>
+          </mat-list-item>
+          <mat-list-item>
+            <button mat-button>
+              <mat-icon>settings</mat-icon>
+              Settings
+            </button>
+          </mat-list-item>
+          <mat-list-item>
+            <button mat-button>
+              <mat-icon>exit_to_app</mat-icon>
+              Logout
+            </button>
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-drawer>
+      <mat-drawer-content class="drawer-content">
+        <router-outlet></router-outlet>
+      </mat-drawer-content>
+    </mat-drawer-container>
+  </div>
