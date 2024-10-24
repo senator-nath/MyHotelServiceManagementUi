@@ -50,6 +50,7 @@ import { UserRgisterComponent } from './user/user-register/user-rgister.componen
 import { UserLoginComponent } from './user/user-login/user-login.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { RoomsComponent } from './hotel-Facilities/rooms/rooms.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { FooterComponent } from './layout/footer/footer.component';
     UserRgisterComponent,
     UserLoginComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    RoomsComponent
   ],
   imports: [
     BrowserModule,
