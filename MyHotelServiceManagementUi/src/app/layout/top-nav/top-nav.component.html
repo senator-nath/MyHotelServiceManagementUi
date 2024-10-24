@@ -1,50 +1,100 @@
-<mat-toolbar class="toolbar">
-    <div class="container">
-      <button mat-icon-button class="menu-button" (click)="drawer.toggle()">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <div class="toolbar-spacer"></div>
-      <img routerLink="/home" src="assets/images/Hotel-Logo.jpeg" alt="Logo" class="toolbar-logo">
-      <div class="toolbar-spacer"></div>
-      <div class="sign-reg">
-        <button mat-raised-button class="example-button" aria-label="Register" 
-          [routerLink]="['register']">
-          Register
+<!-- Toolbar -->
+
+<div class="app-container">
+    <!-- Toolbar -->
+    <mat-toolbar class="toolbar">
+      <div class="container">
+        <button mat-icon-button class="menu-button" (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
         </button>
-        <button mat-raised-button class="example-button" aria-label="Login" 
-          [routerLink]="['login']">
-          Login
-        </button>
+        <div class="toolbar-spacer"></div>
+        <img routerLink="/home" src="assets/images/Hotel-Logo.jpeg" alt="Logo" class="toolbar-logo">
+        <div class="toolbar-spacer"></div>
+        <div class="sign-reg">
+          <button mat-raised-button class="example-button" aria-label="Register" 
+            [routerLink]="['register']">
+            Register
+          </button>
+          <button mat-raised-button class="example-button" aria-label="Login" 
+            [routerLink]="['login']">
+            Login
+          </button>
+        </div>
       </div>
-    </div>
-  </mat-toolbar>
+    </mat-toolbar>
   
-  <div class="main-content">
-    <mat-drawer-container autosize class="drawer-container">
-      <mat-drawer #drawer class="sidenav" mode="over">
-        <mat-nav-list>
-          <mat-list-item>
-            <button mat-button>
-              <mat-icon>dashboard</mat-icon>
-              Dashboard
-            </button>
-          </mat-list-item>
-          <mat-list-item>
-            <button mat-button>
-              <mat-icon>settings</mat-icon>
-              Settings
-            </button>
-          </mat-list-item>
-          <mat-list-item>
-            <button mat-button>
-              <mat-icon>exit_to_app</mat-icon>
-              Logout
-            </button>
-          </mat-list-item>
-        </mat-nav-list>
-      </mat-drawer>
-      <mat-drawer-content class="drawer-content">
-        <router-outlet></router-outlet>
-      </mat-drawer-content>
-    </mat-drawer-container>
+    <!-- Main Content -->
+    <div class="main-content">
+      <mat-drawer-container autosize class="drawer-container">
+        <mat-drawer #drawer class="sidenav" mode="over">
+          <mat-nav-list>
+            <mat-list-item>
+              <button mat-button>
+                <mat-icon>dashboard</mat-icon>
+                Dashboard
+              </button>
+            </mat-list-item>
+            <mat-list-item>
+              <button mat-button>
+                <mat-icon>settings</mat-icon>
+                Settings
+              </button>
+            </mat-list-item>
+            <mat-list-item>
+              <button mat-button>
+                <mat-icon>exit_to_app</mat-icon>
+                Logout
+              </button>
+            </mat-list-item>
+          </mat-nav-list>
+        </mat-drawer>
+        <mat-drawer-content class="drawer-content">
+          <router-outlet></router-outlet>
+        </mat-drawer-content>
+      </mat-drawer-container>
+    </div>
+  
+    <!-- Footer -->
+    <mat-footer class="footer">
+      <div class="footer-content">
+        <mat-grid-list cols="4" gutterSize="10px" class="footer-grid">
+          <mat-grid-tile>
+            <h3>Contact Us</h3>
+            <p>123 Hotel Street, Anytown, USA</p>
+            <p>Phone: 555-555-5555</p>
+            <p>Email: <a href="mailto:info@hotel.com"></a></p>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a routerLink="/rooms">Rooms</a></li>
+              <li><a routerLink="/amenities">Amenities</a></li>
+              <li><a routerLink="/book">Book Now</a></li>
+            </ul>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <h3>Follow Us</h3>
+            <ul class="social-links">
+              <li><a href="#" target="_blank"><mat-icon>facebook</mat-icon></a></li>
+              <li><a href="#" target="_blank"><mat-icon>twitter</mat-icon></a></li>
+              <li><a href="#" target="_blank"><mat-icon>instagram</mat-icon></a></li>
+            </ul>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <h3>Newsletter</h3>
+            <p>Stay up-to-date with our latest offers and news</p>
+            <form>
+              <mat-form-field appearance="fill">
+                <mat-label>Email Address</mat-label>
+                <input matInput type="email" />
+              </mat-form-field>
+              <button mat-raised-button color="primary">Subscribe</button>
+            </form>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+      <div class="copyright">
+        &copy; 2023 Hotel Name. All rights reserved.
+      </div>
+    </mat-footer>
   </div>

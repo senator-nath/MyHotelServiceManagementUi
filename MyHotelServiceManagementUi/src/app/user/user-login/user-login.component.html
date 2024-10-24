@@ -1,1 +1,23 @@
-<p>user-login works!</p>
+<form  >
+    <div class="login-container">
+      <h2>Login Form</h2>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="userName">
+       
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" type="password">
+        
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit">Login</button>
+  
+      <p>
+        Don't have an account? <a routerLink="/register">Register</a>
+      </p>
+    </div>
+  </form>

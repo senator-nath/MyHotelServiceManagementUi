@@ -49,6 +49,7 @@ import { TopNavComponent } from './layout/top-nav/top-nav.component';
 import { UserRgisterComponent } from './user/user-register/user-rgister.component';
 import { UserLoginComponent } from './user/user-login/user-login.component';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { HomeComponent } from './home/home.component';
     TopNavComponent,
     UserRgisterComponent,
     UserLoginComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
