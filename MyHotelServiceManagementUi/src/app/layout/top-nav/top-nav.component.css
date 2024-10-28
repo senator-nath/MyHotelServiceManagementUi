@@ -75,10 +75,11 @@
   .main-content {
     padding-top: 64px;
     flex: 1;
+    overflow-y: auto;
   }
   
   .drawer-container {
-    height: calc(100vh - 64px);
+    height: 100%;
   }
   
   .sidenav {

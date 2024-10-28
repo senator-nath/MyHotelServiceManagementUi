@@ -1,32 +1,22 @@
- <div class="room-details-container">
- <div class="room-header">
-<h1>Room-101 details</h1>
- </div>
- <mat-card class="room-card">
-    <div class="room-content">
-        <div class="room-image">
-          <img src="/assets/images/room-101.jpeg" alt="room-101-image">
+<div class="rooms-container">
+    <img src="/assets/images/hotelroom1.jpeg" alt="background" class="hero-background">
+    <mat-card class="room-details-container" *ngFor="let room of rooms">
+      <mat-card-content>
+        <div class="room-content">
+          <div class="room-image">
+            <img src="/assets/images/hotelroom1.jpeg" alt="room-image">
+          </div>
+          <div class="room-info">
+            <mat-card-title>Room {{ room.roomNumber }}</mat-card-title>
+            <mat-card-subtitle>Price: ₦{{ room.price }}</mat-card-subtitle>
+            <p>Status: {{ room.status }}</p>
+            <p>Date Created: {{ room.dateCreated | date }}</p>
+          </div>
         </div>
-        <div class="room-information">
-            <P><strong>Room-No:</strong>101</P>
-            <P><strong>Room-Type:</strong>Supreme Room</P>
-            <p><strong>Room Amenities:</strong>
-                <span><mat-icon>hotel</mat-icon> 1 King Bed</span>,
-                <span><mat-icon>wifi</mat-icon> Free WiFi</span>,
-                <span><mat-icon>ac_unit</mat-icon> Air Conditioning</span>
-              </p>
-            <p><strong>Room Price:</strong> ₦15,000</p>
-            <P><strong>Room-Status:</strong>Available</P>
-            <P><strong>Date Created:</strong>101</P>
-            <p class="room-discription">The Supreme Room at My Hotel is bright and has easy access to the pool, gym, and spa. It is available with a king-sized bed.</p>
-
-        </div>
-        
-    </div>
-    <mat-card-actions>
-        <button mat-raised-button color="primary">Book Now</button>
-     
-      </mat-card-actions>
-
- </mat-card>
- </div>
+        <mat-card-actions class="button-container">
+          <button mat-raised-button color="primary" [routerLink]="['/book-room', room.id]">Book Now</button>
+          <button mat-raised-button color="accent" [routerLink]="['/view-room', room.id]">View Room</button>
+        </mat-card-actions>
+      </mat-card-content>
+    </mat-card>
+  </div>

@@ -51,6 +51,9 @@ import { UserLoginComponent } from './user/user-login/user-login.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { RoomsComponent } from './hotel-Facilities/rooms/rooms.component';
+import { ViewRoomComponent } from './hotel-Facilities/view-room/view-room.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BookingComponent } from './hotel-Facilities/booking/booking.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +63,9 @@ import { RoomsComponent } from './hotel-Facilities/rooms/rooms.component';
     UserLoginComponent,
     HomeComponent,
     FooterComponent,
-    RoomsComponent
+    RoomsComponent,
+    ViewRoomComponent,
+    BookingComponent
   ],
   imports: [
     BrowserModule,
@@ -103,7 +108,8 @@ import { RoomsComponent } from './hotel-Facilities/rooms/rooms.component';
     MatSortModule,
     MatTableModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule,
   ],
   schemas:[
     CUSTOM_ELEMENTS_SCHEMA
