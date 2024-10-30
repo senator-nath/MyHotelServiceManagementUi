@@ -16,7 +16,7 @@ export class RoomService {
     return this.http.get<Room[]>(`${this.baseUrl}/get-all-rooms`);
   }
 
-  getRoomById(id: number): Observable<ApiResponse> {
-    return this.http.get<ApiResponse>(this.baseUrl + '/Get-Room-By-Id/' + id);
+  getRoomById(id: number): Observable<ApiResponse<Room>>{
+    return this.http.get<ApiResponse<Room>>(this.baseUrl + '/Get-Room-By-Id/' + id);
   }
 }

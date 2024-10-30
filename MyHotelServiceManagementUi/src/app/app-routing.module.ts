@@ -15,7 +15,7 @@ const routes: Routes = [
   {path:'register',component:UserRgisterComponent,title:'Register'},
   {path:'room',component:RoomsComponent,title:'room'},
   {path:'view-room/:id',component:ViewRoomComponent,title:'view-room'},
-  {path:'book-room/:id',component:BookingComponent,title:'book-room'},
+  {path:'book-room',component:BookingComponent,title:'book-room'},
 ];
 
 @NgModule({

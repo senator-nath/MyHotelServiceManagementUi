@@ -1,8 +1,8 @@
 import { Room } from "./room.model";
 
-export interface ApiResponse {
+export interface ApiResponse<T> {
     success: boolean;
-    data: Room;
+    data: T;
     message: string | null;
     statusCode: number;
   }
