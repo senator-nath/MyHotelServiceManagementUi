@@ -3,14 +3,13 @@ import { RoomAmenities } from "./RoomAmenities.model";
 import { RoomType } from "./roomType.model";
 
 export interface Room {
-    id: number;
-    roomNumber: string;
-    price: number;
-    status: string;
-    dateCreated: Date;
-    roomTypeId: number;
-    roomTypeName: string;
-    roomAmenitiesId: number;
-    roomAmenitiesName: string;
-    urls: string[]
+  id: number;
+  roomNumber: string;
+  price: number;
+  status: string;
+  dateCreated: Date;
+  roomTypeId: number;
+  urls: string[];
+  roomType: RoomType;
+  roomAmenities: RoomAmenities;
   }

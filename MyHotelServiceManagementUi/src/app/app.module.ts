@@ -51,9 +51,10 @@ import { UserLoginComponent } from './user/user-login/user-login.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { RoomsComponent } from './hotel-Facilities/rooms/rooms.component';
-import { ViewRoomComponent } from './hotel-Facilities/view-room/view-room.component';
+ 
 import { HttpClientModule } from '@angular/common/http';
 import { BookingComponent } from './hotel-Facilities/booking/booking.component';
+import { ViewRoomComponent } from './hotel-Facilities/view-room/view-room.component';
 
 @NgModule({
   declarations: [
@@ -64,8 +65,9 @@ import { BookingComponent } from './hotel-Facilities/booking/booking.component';
     HomeComponent,
     FooterComponent,
     RoomsComponent,
-    ViewRoomComponent,
-    BookingComponent
+   
+    BookingComponent,
+        ViewRoomComponent
   ],
   imports: [
     BrowserModule,

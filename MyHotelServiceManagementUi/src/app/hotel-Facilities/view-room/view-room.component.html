@@ -1,1 +1,15 @@
-<p>view-room works!</p>
+<div *ngIf="room">
+    <h2>Room Details</h2>
+    <p>Room Number: {{ room.roomNumber }}</p>
+    <p>Price: {{ room.price }}</p>
+    <p>Status: {{ room.status }}</p>
+    <p>Date Created: {{ room.dateCreated | date }}</p>
+    <h3>Room Type</h3>
+    <p>Type Name: {{ room.roomType.typeName }}</p>
+    <p>Description: {{ room.roomType.description }}</p>
+    <p>Accessibility Features: {{ room.roomType.accessibilityFeatures }}</p>
+    <h3>Room Amenities</h3>
+    <p>Name: {{ room.roomAmenities.name }}</p>
+    <p>Amenities: {{ room.roomAmenities.amenities.join(', ') }}</p>
+    <p>Urls: {{ room.urls.join(', ') }}</p>
+  </div>

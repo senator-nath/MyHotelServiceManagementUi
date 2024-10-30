@@ -6,5 +6,5 @@ export interface RoomType {
   typeName: string;
   description: string;
   accessibilityFeatures: string;
-  rooms: Room[];
+   
   }
