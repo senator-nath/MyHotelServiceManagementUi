@@ -55,6 +55,7 @@ import { RoomsComponent } from './hotel-Facilities/rooms/rooms.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BookingComponent } from './hotel-Facilities/booking/booking.component';
 import { ViewRoomComponent } from './hotel-Facilities/view-room/view-room.component';
+import { SideNavComponent } from './layout/side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { ViewRoomComponent } from './hotel-Facilities/view-room/view-room.compon
     RoomsComponent,
    
     BookingComponent,
-        ViewRoomComponent
+        ViewRoomComponent,
+        SideNavComponent
   ],
   imports: [
     BrowserModule,
