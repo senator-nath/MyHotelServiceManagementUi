@@ -32,6 +32,7 @@ export class ViewRoomComponent implements OnInit{
       amenities: []
     }
   };
+  baseUrl = 'https://localhost:5001';
   constructor(
     private readonly roomService:RoomService,
     private readonly route:ActivatedRoute

@@ -9,7 +9,7 @@ export interface Room {
   status: string;
   dateCreated: Date;
   roomTypeId: number;
-  urls: string[];
   roomType: RoomType;
   roomAmenities: RoomAmenities;
+  urls: string[];
   }

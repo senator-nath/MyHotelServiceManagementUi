@@ -9,10 +9,12 @@ import { RoomService } from 'src/app/services/room.service';
 })
 export class RoomsComponent {
   rooms: Room[] = [];
+  baseUrl: string = 'https://localhost:5001';
 
   constructor(private roomService: RoomService) { }
 
   ngOnInit(): void {
+    
     this.roomService.getAllRooms().subscribe(response => {
       this.rooms = response;
     }, error => {

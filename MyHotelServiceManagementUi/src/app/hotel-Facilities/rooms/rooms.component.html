@@ -4,7 +4,7 @@
       <mat-card-content>
         <div class="room-content">
           <div class="room-image">
-            <img src="/assets/images/hotelroom1.jpeg" alt="room-image">
+            <img [src]="baseUrl + room.urls[0]" alt="room-image">
           </div>
           <div class="room-info">
             <mat-card-title>Room {{ room.roomNumber }}</mat-card-title>

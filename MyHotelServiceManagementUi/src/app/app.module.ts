@@ -56,6 +56,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BookingComponent } from './hotel-Facilities/booking/booking.component';
 import { ViewRoomComponent } from './hotel-Facilities/view-room/view-room.component';
 import { SideNavComponent } from './layout/side-nav/side-nav.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,8 @@ import { SideNavComponent } from './layout/side-nav/side-nav.component';
    
     BookingComponent,
         ViewRoomComponent,
-        SideNavComponent
+        SideNavComponent,
+        DashboardComponent
   ],
   imports: [
     BrowserModule,

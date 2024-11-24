@@ -7,6 +7,7 @@ import { RoomsComponent } from './hotel-Facilities/rooms/rooms.component';
  
 import { BookingComponent } from './hotel-Facilities/booking/booking.component';
 import { ViewRoomComponent } from './hotel-Facilities/view-room/view-room.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'/home', pathMatch:'full'},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path:'room',component:RoomsComponent,title:'room'},
   {path:'view-room/:id',component:ViewRoomComponent,title:'view-room'},
   {path:'book-room',component:BookingComponent,title:'book-room'},
+  {path:'dashboard',component:DashboardComponent,title:'dashboard'},
 ];
 
 @NgModule({

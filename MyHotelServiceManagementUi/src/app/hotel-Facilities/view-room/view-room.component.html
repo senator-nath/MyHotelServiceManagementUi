@@ -1,15 +1,23 @@
 <div *ngIf="room">
-    <h2>Room Details</h2>
-    <p>Room Number: {{ room.roomNumber }}</p>
-    <p>Price: {{ room.price }}</p>
-    <p>Status: {{ room.status }}</p>
-    <p>Date Created: {{ room.dateCreated | date }}</p>
-    <h3>Room Type</h3>
-    <p>Type Name: {{ room.roomType.typeName }}</p>
-    <p>Description: {{ room.roomType.description }}</p>
-    <p>Accessibility Features: {{ room.roomType.accessibilityFeatures }}</p>
-    <h3>Room Amenities</h3>
-    <p>Name: {{ room.roomAmenities.name }}</p>
-    <p>Amenities: {{ room.roomAmenities.amenities.join(', ') }}</p>
-    <p>Urls: {{ room.urls.join(', ') }}</p>
+  <h2>Room Details</h2>
+  <p><strong>Room Number:</strong> {{ room.roomNumber }}</p>
+  <p><strong>Price:</strong> {{ room.price }}</p>
+  <p><strong>Status:</strong> {{ room.status }}</p>
+  <p><strong>Date Created:</strong> {{ room.dateCreated | date }}</p>
+
+  <h3>Room Type</h3>
+  <p><strong>Type Name:</strong> {{ room.roomType.typeName }}</p>
+  <p><strong>Description:</strong> {{ room.roomType.description }}</p>
+  <p><strong>Accessibility Features:</strong> {{ room.roomType.accessibilityFeatures }}</p>
+
+  <h3>Room Amenities</h3>
+  <p><strong>Name:</strong> {{ room.roomAmenities.name }}</p>
+  <p><strong>Amenities:</strong> {{ room.roomAmenities.amenities.join(', ') }}</p>
+
+  <h3>Room Images</h3>
+  <div class="image-gallery" *ngIf="room.urls.length > 0">
+    <div class="room-image" *ngFor="let url of room.urls">
+      <img [src]="baseUrl + url" alt="Room Image" />
+    </div>
   </div>
+</div>
